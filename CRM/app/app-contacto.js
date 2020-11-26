@@ -5,7 +5,7 @@ var aceptar = document.getElementById("aceptar")
 var formulario = document.getElementById("formulario");
 
 function comprobarSesion(){
-    fetch('server/sesion.php')
+    fetch('../server/sesion.php')
     .then(res => res.json())
     .then(data => {
         console.log(data)
@@ -25,7 +25,7 @@ cerrar_sesion.addEventListener('click',function(){
 })
 
 aceptar.addEventListener('click',function(){
-    fetch('server/cerrar_sesion.php') 
+    fetch('../server/cerrar_sesion.php') 
     .then(res => res.json())
     .then(data => {
         if(data === 'cerrado'){
@@ -44,7 +44,7 @@ formulario.addEventListener('submit',function(e){
     console.log(datos.get('correo'));
     console.log(datos.get('estado'));
 
-    fetch('server/post-contacto.php',{
+    fetch('../server/post-contacto.php',{
         method: 'POST',
         body: datos
     })

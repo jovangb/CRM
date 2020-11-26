@@ -3,7 +3,7 @@ var salir = document.getElementById("salir");
 var aceptar = document.getElementById("aceptar")
 
 function comprobarSesion(){
-    fetch('server/sesion.php')
+    fetch('../server/sesion.php')
     .then(res => res.json())
     .then(data => {
         console.log(data)
@@ -23,7 +23,7 @@ cerrar_sesion.addEventListener('click',function(){
 })
 
 aceptar.addEventListener('click',function(){
-    fetch('server/cerrar_sesion.php') 
+    fetch('../server/cerrar_sesion.php') 
     .then(res => res.json())
     .then(data => {
         if(data === 'cerrado'){

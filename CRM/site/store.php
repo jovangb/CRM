@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include "headers/head.php" ?>
+<?php include "scripts/head.php" ?>
 
 <body>
 
@@ -38,6 +38,10 @@
     <!-- hay que reparar el footer que se ve del pito -->
     <?php include "elements/footer.php" ?>
 
+    <!-- <?php include "elements/alert.php" ?> -->
+
 </body>
+
+<?php include "scripts/js-store.php" ?>
 
 </html>

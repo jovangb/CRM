@@ -6,12 +6,12 @@ var formulario = document.getElementById("formulario");
 var salir = document.getElementById("cerrar_sesion");
 
 function comprobarSesion(){
-    fetch('server/sesion.php')
+    fetch('../server/sesion.php')
     .then(res => res.json())
     .then(data => {
         console.log(data)
         if(data === 'sesion'){
-            location.href = 'home.html';
+            location.href = 'store.php';
         }else{
             location.href = '#';
         }
@@ -28,7 +28,7 @@ formulario.addEventListener('submit',function(e){
     console.log(datos);
     console.log(datos.get('usuario'));
 
-    fetch('post.php',{
+    fetch('../server/post.php',{
         method: 'POST',
         body: datos
     })
@@ -36,7 +36,7 @@ formulario.addEventListener('submit',function(e){
         .then(data => {
             console.log(data)
             if(data === 'success'){
-                location.href = 'home.html';
+                location.href = 'store.php';
             }else{
                 if(intentos === 1){
                     alerta.innerHTML += `<small class="text-danger">Datos incorrectos, inténtalo de nuevo.</small>`

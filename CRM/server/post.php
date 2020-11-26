@@ -13,17 +13,9 @@
         $fila = mysqli_fetch_row($Query);
         session_start();
         $_SESSION['usuario'] = $fila[1]; 
-        // * codifica el encode en un json
         echo json_encode('success');
     }else{
         echo json_encode('error');
     }
+
 ?>
-
-<!-- 
-usuarios contraseña id
-Jovan       pass    0
-Badión      pass    1
-...
-
- -->
