@@ -8,7 +8,7 @@
 		return $Con;
 	}
 	function EjecutarConsulta($Con, $SQL){
-		$Query = mysqli_query($Con, $SQL);
+		$Query = mysqli_query($Con, $SQL) or die(mysqli_error($Con));
 		return $Query;
 	}
 	function Cerrar($Con){

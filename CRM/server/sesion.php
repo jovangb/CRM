@@ -5,6 +5,7 @@
 
     if($key == null || $key == ''){
         echo json_encode('nosesion');
+        exit;
     }else{
         echo json_encode('sesion');
     }

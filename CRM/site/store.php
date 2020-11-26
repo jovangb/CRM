@@ -13,24 +13,10 @@
             <section class="row">
                 <?php include "elements/searchbar.php" ?>
             </section>
-
-            <section class="row mb-2">
-
-                <?php include "elements/itemcard.php" ?>
-                <?php include "elements/itemcard.php" ?>
-                <?php include "elements/itemcard.php" ?>
-                <?php include "elements/itemcard.php" ?>
-
+            <section id="items" class="row mb-2">
+                
             </section>
 
-            <section class="row mb-2">
-
-                <?php include "elements/itemcard.php" ?>
-                <?php include "elements/itemcard.php" ?>
-                <?php include "elements/itemcard.php" ?>
-                <?php include "elements/itemcard.php" ?>
-
-            </section>
 
         </section>
 
