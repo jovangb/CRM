@@ -1,8 +1,26 @@
 //console.log("Funcionando")
 
 var intentos = 1;
-var alerta = document.getElementById("alerta")
+var alerta = document.getElementById("alerta");
 var formulario = document.getElementById("formulario");
+var salir = document.getElementById("cerrar_sesion");
+
+function comprobarSesion(){
+    fetch('sesion.php')
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        if(data === 'sesion'){
+            location.href = 'home.html';
+        }else{
+            location.href = '#';
+        }
+    })
+}
+
+document.onload = comprobarSesion()
+
+
 formulario.addEventListener('submit',function(e){
     e.preventDefault();
 
