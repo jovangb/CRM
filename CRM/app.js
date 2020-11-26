@@ -6,7 +6,7 @@ var formulario = document.getElementById("formulario");
 var salir = document.getElementById("cerrar_sesion");
 
 function comprobarSesion(){
-    fetch('sesion.php')
+    fetch('server/sesion.php')
     .then(res => res.json())
     .then(data => {
         console.log(data)
