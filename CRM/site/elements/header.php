@@ -8,15 +8,15 @@
                 <div>
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item text-center mx-lg-2">
-                            <a href="#" class="nav-link active"><img src="images/carrito.png" alt="carrito"><br><small>Carrito</small></a>
+                            <a href="#" class="nav-link active"><img src="../images/carrito.png" alt="carrito"><br><small>Carrito</small></a>
                             <hr width="50%" class="d-lg-none d-sm-block">
                         </li>
                         <li class="nav-item text-center mx-lg-2">
-                            <a href="contacto.html" class="nav-link active"><img src="images/complain.png" alt="carrito"><br><small>Contacto</small></a>
+                            <a href="contacto.html" class="nav-link active"><img src="../images/complain.png" alt="carrito"><br><small>Contacto</small></a>
                             <hr width="50%" class="d-lg-none d-sm-block">
                         </li>
                         <li class="nav-item text-center mx-lg-2">
-                            <a href="#" class="nav-link active"><img src="images/user.png" alt="user"><br><small>Cerrar Sesión</small></a>
+                            <a href="#" class="nav-link active"><img src="../images/user.png" alt="user"><br><small>Cerrar Sesión</small></a>
                             <hr width="50%" class="d-lg-none d-sm-block">
                         </li>
                     </ul>
