@@ -5,11 +5,10 @@ function generateItemCards() {
     fetch('../server/getallitems.php')
         .then(function (response) {
             // The API call was successful!
+            console.log(response)
             return response.text();
         }).then(function (html) {
             // console.log(JSON.parse(html))
-
-
             items.innerHTML += html;
 
             console.log(html);

@@ -31,5 +31,6 @@
 </body>
 
 <?php include "scripts/js-store.php" ?>
+<script src="../app/app-store.js"></script>
 
 </html>
