@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-11-2020 a las 18:04:17
+-- Tiempo de generación: 27-11-2020 a las 07:24:10
 -- Versión del servidor: 10.3.25-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -21,6 +21,34 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `crm`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `contactos`
+--
+
+CREATE TABLE `contactos` (
+  `id_contacto` int(6) NOT NULL,
+  `tipo` varchar(20) DEFAULT NULL,
+  `nombre` varchar(30) NOT NULL,
+  `calle_uno` varchar(60) DEFAULT NULL,
+  `calle_dos` varchar(60) DEFAULT NULL,
+  `ciudad` varchar(60) DEFAULT NULL,
+  `estado` varchar(60) NOT NULL,
+  `CP` varchar(15) DEFAULT NULL,
+  `telefono` varchar(15) DEFAULT NULL,
+  `celular` varchar(15) DEFAULT NULL,
+  `correo` varchar(35) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `contactos`
+--
+
+INSERT INTO `contactos` (`id_contacto`, `tipo`, `nombre`, `calle_uno`, `calle_dos`, `ciudad`, `estado`, `CP`, `telefono`, `celular`, `correo`) VALUES
+(1, NULL, 'Jovan GarcÃ­a', NULL, NULL, NULL, 'QuerÃ©taro', NULL, NULL, '4424310332', 'jovan@jovangarcia.com'),
+(2, NULL, 'Jovan GarcÃ­a', NULL, NULL, NULL, 'MichoacÃ¡n', NULL, NULL, '1234567998', 'lalo@lalo.com');
 
 -- --------------------------------------------------------
 
@@ -61,6 +89,14 @@ CREATE TABLE `producto` (
   `stock` int(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`id_producto`, `nombre`, `precio`, `stock`) VALUES
+(1, 'Doble Orquídea Blanca', '589.00', 500),
+(2, 'Doble Orquídea Blanca', '599.00', 400);
+
 -- --------------------------------------------------------
 
 --
@@ -86,6 +122,12 @@ INSERT INTO `usuariostienda` (`idUsuarioTienda`, `nombre`, `apellido`, `email`, 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `contactos`
+--
+ALTER TABLE `contactos`
+  ADD PRIMARY KEY (`id_contacto`);
 
 --
 -- Indices de la tabla `detalle`
@@ -120,6 +162,12 @@ ALTER TABLE `usuariostienda`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `contactos`
+--
+ALTER TABLE `contactos`
+  MODIFY `id_contacto` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de la tabla `factura`
 --
 ALTER TABLE `factura`
@@ -129,7 +177,7 @@ ALTER TABLE `factura`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id_producto` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_producto` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuariostienda`
