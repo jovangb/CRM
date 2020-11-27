@@ -4,21 +4,6 @@ var exito = document.getElementById("exito");
 var aceptar = document.getElementById("aceptar")
 var formulario = document.getElementById("formulario");
 
-function comprobarSesion(){
-    fetch('../server/sesion.php')
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        if(data === 'sesion'){
-            location.href = '#';
-        }else{
-            location.href = 'index.html';
-        }
-    })
-}
-
-document.onload = comprobarSesion()
-
 cerrar_sesion.addEventListener('click',function(){
     console.log("Saliiiiir")
     $(salir).modal('show');

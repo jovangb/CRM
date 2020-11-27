@@ -8,11 +8,11 @@
             <div>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item text-center mx-lg-2">
-                        <a href="#" class="nav-link active"><img src="../images/carrito.png" alt="carrito"><br><small>Carrito</small></a>
+                        <a href="carrito.php" class="nav-link active"><img src="../images/carrito.png" alt="carrito"><br><small>Carrito</small></a>
                         <hr width="50%" class="d-lg-none d-sm-block">
                     </li>
                     <li class="nav-item text-center mx-lg-2">
-                        <a href="contacto.html" class="nav-link active"><img src="../images/complain.png" alt="carrito"><br><small>Contacto</small></a>
+                        <a href="contacto.php" class="nav-link active"><img src="../images/complain.png" alt="carrito"><br><small>Contacto</small></a>
                         <hr width="50%" class="d-lg-none d-sm-block">
                     </li>
                     <li class="nav-item text-center mx-lg-2">
@@ -27,7 +27,7 @@
 
 <!-- * Modal -->
 
-<div class="modal fade" id="salir" tabindex="-1" role="dialog" aria-labelledby="jg-modal" aria-hidden="true">
+<!-- <div class="modal fade" id="salir" tabindex="-1" role="dialog" aria-labelledby="jg-modal" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
@@ -50,4 +50,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+<?php include "elements/log_out_alert.php" ?>

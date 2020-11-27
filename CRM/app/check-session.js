@@ -1,6 +1,8 @@
 var cerrar_sesion = document.getElementById("cerrar_sesion");
 var salir = document.getElementById("salir");
+var exito = document.getElementById("exito");
 var aceptar = document.getElementById("aceptar")
+
 
 
 cerrar_sesion.addEventListener('click',function(){
@@ -17,3 +19,18 @@ aceptar.addEventListener('click',function(){
         }
     })
 })
+
+function comprobarSesion(){
+    fetch('../server/sesion.php')
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        if(data === 'sesion'){
+            location.href = '#';
+        }else{
+            location.href = 'index.html';
+        }
+    })
+}
+
+document.onload = comprobarSesion()

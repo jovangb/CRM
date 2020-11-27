@@ -13,10 +13,12 @@
             <section class="row">
                 <?php include "elements/searchbar.php" ?>
             </section>
-            <section id="items" class="row mb-2">
-                
-            </section>
+            <section id="outer-items">
+             <!-- La parte interior de la iteración de los items debe de estar hecha por etiquetas como las de abajo -->
+                <section id="items" class="row mb-2">
 
+                </section>
+            </section>
 
         </section>
 
@@ -24,10 +26,10 @@
     <!-- hay que reparar el footer que se ve del pito -->
     <?php include "elements/footer.php" ?>
 
-    <!-- <?php include "elements/alert.php" ?> -->
+    <!--  -->
 
 </body>
 
 <?php include "scripts/js-store.php" ?>
-<script src="../app/app-store.js"></script>
+
 </html>
