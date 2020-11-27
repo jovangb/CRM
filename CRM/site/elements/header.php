@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" data-aos="fade-down" data-aos-duration="1000">
     <div class="container">
-        <a href="#" class="navbar-brand">Creativa</a>
+        <a href="store.php" class="navbar-brand">Creativa</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menu">
             <span class="navbar-toggler-icon"></span>
         </button>
