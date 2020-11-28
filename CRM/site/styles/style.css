@@ -1,0 +1,35 @@
+.navbar {
+    background-color: #3FB45F;
+}
+
+#main {
+    margin-top: 90px;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+footer {
+    background-color: #E5E5E5;
+    color: gray;
+}
+
+a {
+    color: #212529;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #2
+}
+
+footer {
+    background-color: #E5E5E5;
+    color: gray;
+}
+
+.card {
+    background-color: #f2f5f5;
+}
