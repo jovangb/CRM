@@ -1,1 +1,0 @@
-Terminar de dar funcionalidad de cerrar sesión en todas las páginas
