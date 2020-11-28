@@ -33,36 +33,50 @@
             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
           </div>
 
+          <div class="form-group">
+            <label for="exampleInputPassword1">Dirección</label>
+            <div class="form-group">
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Calle 1">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Calle 2">
+            </div>
+
+          </div>
+
           
 
-
-
-          <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <div class="input-group">
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="exampleInputFile">
-                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-              </div>
-              <div class="input-group-append">
-                <span class="input-group-text">Upload</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-
+          <!-- end of column -->
         </div>
 
         <div class="col-sm">
 
-        <div class="form-group">
-            <label for="exampleInputPassword1">Dirección</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Calle 1">
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Calle 2">
+        <div class="row">
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Teléfono</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Teléfono">
+              </div>
+
+
+              <div class="form-group">
+                <label for="exampleInputPassword1">Tipo</label>
+                <select class="form-control">
+                  <option selected disabled hidden>Tipo</option>
+                  <option value="Proveedor">Proveedor</option>
+                  <option value="Ciente">Ciente</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm">
+
+              <div class="form-group">
+                <label for="exampleInputPassword1">Celular</label>
+                <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Celular">
+              </div>
+            </div>
+
           </div>
 
           <div class="row">
@@ -119,7 +133,7 @@
                 <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ciudad">
               </div>
             </div>
-       
+
           </div>
 
         </div>
