@@ -10,7 +10,7 @@ function comprobarSesion(){
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        if(data === 'sesion'){
+        if(data[1] === 'sesion'){
             location.href = 'store.php';
         }else{
             location.href = '#';

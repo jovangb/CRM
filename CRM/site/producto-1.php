@@ -31,6 +31,7 @@
 
         </div>
     </div>
+    <?php include "elements/added-alert.php"?>
 
     <?php include "scripts/js-store.php" ?>
     <script src="../app/app-producto-1.js"></script>

@@ -1,7 +1,13 @@
 <?php
-    //session_start();
+    session_start();
+    error_reporting(0);
 
+    $key = $_SESSION['contador'];
     $clave = $_POST['clave'];
+    if($key == null){
+        $_SESSION['contador'] = 0;
+    }
+    
 
     include("conexion.php");
 
@@ -12,13 +18,18 @@
 
 
     if(mysqli_num_rows($Query)>0){
+        $_SESSION['contador']++;
         $fila = mysqli_fetch_row($Query);
-        $_SESSION['producto'] = $fila;
+        if($_SESSION['productos'] == null){
+            $_SESSION['productos'] = array();
+        }
+        array_push($_SESSION['productos'], $fila);
+        $mensajes = array(strval($_SESSION['contador']),"success");
+        //array_push($_SESSION['productos'],"success", strval($_SESSION['contador']));
+        //$datos = array("id_producto"=> $_SESSION['producto'][1], "mensaje" => "success");
         
-        $datos = array("id_producto"=> $_SESSION['producto'][1], "mensaje" => "success");
-        
-        echo json_encode($datos);
-        //echo json_encode($conejo);
+        echo json_encode($mensajes);
+
     }else{
         echo json_encode('error');
     }
