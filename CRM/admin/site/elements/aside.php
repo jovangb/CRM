@@ -57,24 +57,34 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="calendario.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Calendario
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+          <li class="nav-item menu-closed">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Citas
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-          </li>
-        </ul>
-      </nav>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="calendario.php" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Calendario</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="ver_citas.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver citas</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="ingresar_cita.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Agendar cita</p>
+                </a>
+              </li>
+            </ul>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
