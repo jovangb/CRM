@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 27-11-2020 a las 07:24:10
--- Versión del servidor: 10.3.25-MariaDB
--- Versión de PHP: 7.3.0
+-- Host: localhost
+-- Generation Time: Nov 29, 2020 at 02:08 AM
+-- Server version: 10.4.16-MariaDB
+-- PHP Version: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,16 +18,63 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `crm`
+-- Database: `crm`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `contactos`
+-- Table structure for table `admin`
 --
 
-CREATE TABLE `contactos` (
+CREATE TABLE `admin` (
+  `id_admin` int(6) NOT NULL,
+  `nombre` varchar(80) NOT NULL,
+  `correo` varchar(50) NOT NULL,
+  `pass` varchar(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `nombre`, `correo`, `pass`) VALUES
+(2, 'Juan', 'jorge@baidon.com', '1234'),
+(3, 'Juan Gonzalez', '1@juan.com', '1234'),
+(4, 'Juan Gonzalez', '2@juan.com', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cita`
+--
+
+CREATE TABLE `cita` (
+  `id_cita` int(6) NOT NULL,
+  `id_admin` int(6) NOT NULL,
+  `id_contacto` int(6) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
+  `quantyty` int(6) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 0,
+  `fecha_cita` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cita`
+--
+
+INSERT INTO `cita` (`id_cita`, `id_admin`, `id_contacto`, `type`, `descripcion`, `quantyty`, `status`, `fecha_cita`) VALUES
+(1, 2, 2, 'venta', 'Una venta chida', 10000, 0, '2020-11-13'),
+(2, 2, 2, 'venta', 'Una venta chida', 10000, 0, '2020-11-09');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contacto`
+--
+
+CREATE TABLE `contacto` (
   `id_contacto` int(6) NOT NULL,
   `tipo` varchar(20) DEFAULT NULL,
   `nombre` varchar(30) NOT NULL,
@@ -39,21 +85,23 @@ CREATE TABLE `contactos` (
   `CP` varchar(15) DEFAULT NULL,
   `telefono` varchar(15) DEFAULT NULL,
   `celular` varchar(15) DEFAULT NULL,
-  `correo` varchar(35) DEFAULT NULL
+  `correo` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `contactos`
+-- Dumping data for table `contacto`
 --
 
-INSERT INTO `contactos` (`id_contacto`, `tipo`, `nombre`, `calle_uno`, `calle_dos`, `ciudad`, `estado`, `CP`, `telefono`, `celular`, `correo`) VALUES
+INSERT INTO `contacto` (`id_contacto`, `tipo`, `nombre`, `calle_uno`, `calle_dos`, `ciudad`, `estado`, `CP`, `telefono`, `celular`, `correo`) VALUES
 (1, NULL, 'Jovan GarcÃ­a', NULL, NULL, NULL, 'QuerÃ©taro', NULL, NULL, '4424310332', 'jovan@jovangarcia.com'),
-(2, NULL, 'Jovan GarcÃ­a', NULL, NULL, NULL, 'MichoacÃ¡n', NULL, NULL, '1234567998', 'lalo@lalo.com');
+(2, NULL, 'Jovan GarcÃ­a', NULL, NULL, NULL, 'MichoacÃ¡n', NULL, NULL, '1234567998', 'lalo@lalo.com'),
+(3, 'proveedor', 'Jorge Baidón', 'calle_uno', 'calle_dos', 'Querétaro', 'Querétaro', 'CP', '1123', '123', '1@baidon.com'),
+(4, 'proveedor', 'Jorge Baidón', 'calle_uno', 'calle_dos', 'Querétaro', 'Querétaro', 'CP', '1123', '123', '2@baidon.com');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `detalle`
+-- Table structure for table `detalle`
 --
 
 CREATE TABLE `detalle` (
@@ -67,7 +115,7 @@ CREATE TABLE `detalle` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `factura`
+-- Table structure for table `factura`
 --
 
 CREATE TABLE `factura` (
@@ -79,7 +127,7 @@ CREATE TABLE `factura` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `producto`
+-- Table structure for table `producto`
 --
 
 CREATE TABLE `producto` (
@@ -90,7 +138,7 @@ CREATE TABLE `producto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `producto`
+-- Dumping data for table `producto`
 --
 
 INSERT INTO `producto` (`id_producto`, `nombre`, `precio`, `stock`) VALUES
@@ -100,7 +148,7 @@ INSERT INTO `producto` (`id_producto`, `nombre`, `precio`, `stock`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuariostienda`
+-- Table structure for table `usuariostienda`
 --
 
 CREATE TABLE `usuariostienda` (
@@ -113,24 +161,40 @@ CREATE TABLE `usuariostienda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `usuariostienda`
+-- Dumping data for table `usuariostienda`
 --
 
 INSERT INTO `usuariostienda` (`idUsuarioTienda`, `nombre`, `apellido`, `email`, `dinero`, `pass`) VALUES
 (1, 'Jovan', 'García', 'gbjovan@gmail.com', '900.00', 'pass');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `contactos`
+-- Indexes for table `admin`
 --
-ALTER TABLE `contactos`
-  ADD PRIMARY KEY (`id_contacto`);
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`),
+  ADD UNIQUE KEY `correo` (`correo`);
 
 --
--- Indices de la tabla `detalle`
+-- Indexes for table `cita`
+--
+ALTER TABLE `cita`
+  ADD PRIMARY KEY (`id_cita`),
+  ADD KEY `cita_ibfk_1` (`id_admin`),
+  ADD KEY `cita_ibfk_2` (`id_contacto`);
+
+--
+-- Indexes for table `contacto`
+--
+ALTER TABLE `contacto`
+  ADD PRIMARY KEY (`id_contacto`),
+  ADD UNIQUE KEY `correo` (`correo`);
+
+--
+-- Indexes for table `detalle`
 --
 ALTER TABLE `detalle`
   ADD PRIMARY KEY (`num_detalle`,`id_factura`),
@@ -138,66 +202,85 @@ ALTER TABLE `detalle`
   ADD KEY `id_producto` (`id_producto`);
 
 --
--- Indices de la tabla `factura`
+-- Indexes for table `factura`
 --
 ALTER TABLE `factura`
   ADD PRIMARY KEY (`id_factura`),
   ADD KEY `id_cliente` (`id_cliente`);
 
 --
--- Indices de la tabla `producto`
+-- Indexes for table `producto`
 --
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`id_producto`);
 
 --
--- Indices de la tabla `usuariostienda`
+-- Indexes for table `usuariostienda`
 --
 ALTER TABLE `usuariostienda`
   ADD PRIMARY KEY (`idUsuarioTienda`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `contactos`
+-- AUTO_INCREMENT for table `admin`
 --
-ALTER TABLE `contactos`
-  MODIFY `id_contacto` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `factura`
+-- AUTO_INCREMENT for table `cita`
+--
+ALTER TABLE `cita`
+  MODIFY `id_cita` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `contacto`
+--
+ALTER TABLE `contacto`
+  MODIFY `id_contacto` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `factura`
 --
 ALTER TABLE `factura`
   MODIFY `id_factura` int(6) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `producto`
+-- AUTO_INCREMENT for table `producto`
 --
 ALTER TABLE `producto`
   MODIFY `id_producto` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `usuariostienda`
+-- AUTO_INCREMENT for table `usuariostienda`
 --
 ALTER TABLE `usuariostienda`
   MODIFY `idUsuarioTienda` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `detalle`
+-- Constraints for table `cita`
+--
+ALTER TABLE `cita`
+  ADD CONSTRAINT `cita_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`),
+  ADD CONSTRAINT `cita_ibfk_2` FOREIGN KEY (`id_contacto`) REFERENCES `contacto` (`id_contacto`);
+
+--
+-- Constraints for table `detalle`
 --
 ALTER TABLE `detalle`
   ADD CONSTRAINT `detalle_ibfk_1` FOREIGN KEY (`id_factura`) REFERENCES `factura` (`id_factura`),
   ADD CONSTRAINT `detalle_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`);
 
 --
--- Filtros para la tabla `factura`
+-- Constraints for table `factura`
 --
 ALTER TABLE `factura`
   ADD CONSTRAINT `factura_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `usuariostienda` (`idUsuarioTienda`);
