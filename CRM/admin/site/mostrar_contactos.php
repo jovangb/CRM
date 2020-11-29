@@ -40,138 +40,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Main content -->
 <section class="content">
       <div class="container-fluid">
-      <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Expandable Table</h3>
-              </div>
-              <!-- ./card-header -->
-              <div class="card-body">
-                <table class="table table-bordered table-hover">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Tipo</th>
-                      <th>Nombre</th>
-                      <th>Celular</th>
-                      <th>Correo</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr data-widget="expandable-table" aria-expanded="false">
-                      <td>183</td>
-                      <td>Cliente</td>
-                      <td>Eduardo C.</td>
-                      <td>4424580315</td>
-                      <td>lalocortes@gmail.com</td>
-                    </tr>
-                    <tr class="expandable-body">
-                      <td colspan="5">
-                      <div class="card-body table-responsive p-0" style="height: 105px; ">
-                        <table class="table table-head-fixed text-nowrap">
-                            <thead>
-                                <tr>
-                                <th>Calle </th>
-                                <th>Numero int.</th>
-                                <th>Ciudad</th>
-                                <th>Estado</th>
-                                <th>CP</th>
-                                <th>Telefono</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td>Yaquis</td>
-                                <td>#332</td>
-                                <td>Querétaro</td>
-                                <td>Querétaro</td>
-                                <td>76116</td>
-                                <td>2185278</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                      </div>
-                      </td>
-                    </tr>
-                    <tr data-widget="expandable-table" aria-expanded="false">
-                      <td>183</td>
-                      <td>Cliente</td>
-                      <td>Eduardo C.</td>
-                      <td>4424580315</td>
-                      <td>lalocortes@gmail.com</td>
-                    </tr>
-                    <tr class="expandable-body">
-                      <td colspan="5">
-                      <div class="card-body table-responsive p-0" style="height: 105px; ">
-                        <table class="table table-head-fixed text-nowrap">
-                            <thead>
-                                <tr>
-                                <th>Calle </th>
-                                <th>Numero int.</th>
-                                <th>Ciudad</th>
-                                <th>Estado</th>
-                                <th>CP</th>
-                                <th>Telefono</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td>Yaquis</td>
-                                <td>#332</td>
-                                <td>Querétaro</td>
-                                <td>Querétaro</td>
-                                <td>76116</td>
-                                <td>2185278</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                      </div>
-                      </td>
-                    </tr>
-                    <tr data-widget="expandable-table" aria-expanded="false">
-                      <td>183</td>
-                      <td>Cliente</td>
-                      <td>Eduardo C.</td>
-                      <td>4424580315</td>
-                      <td>lalocortes@gmail.com</td>
-                    </tr>
-                    <tr class="expandable-body">
-                      <td colspan="5">
-                      <div class="card-body table-responsive p-0" style="height: 105px; ">
-                        <table class="table table-head-fixed text-nowrap">
-                            <thead>
-                                <tr>
-                                <th>Calle </th>
-                                <th>Numero int.</th>
-                                <th>Ciudad</th>
-                                <th>Estado</th>
-                                <th>CP</th>
-                                <th>Telefono</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td>Yaquis</td>
-                                <td>#332</td>
-                                <td>Querétaro</td>
-                                <td>Querétaro</td>
-                                <td>76116</td>
-                                <td>2185278</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                      </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-        </div>
+        <?php include "elements/tabla_contactos.php" ?>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
@@ -197,5 +66,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- jQuery -->
 <?php include "scripts/js-req.php"?>
+
 </body>
 </html>
