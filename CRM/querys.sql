@@ -21,7 +21,11 @@ UPDATE contactos SET nombre = 'Juan', tipo = '1234' WHERE correo = 'jorge@baidon
 
 DELETE FROM contactos WHERE id_contacto = 1;
 
-SELECT * FROM cita ORDER BY DATE(fecha_cita) ASC;
+SELECT admin.nombre, contacto.nombre, fecha_cita, quantyty, type, descripcion, status 
+FROM cita 
+INNER JOIN admin ON cita.id_admin = admin.id_admin
+INNER JOIN contacto ON cita.id_contacto= contacto.id_contacto
+ORDER BY DATE(fecha_cita) ASC;
 
 SELECT id_admin FROM admin WHERE correo = "jorge@baidon.com" INTO @idadmin;
 SELECT id_contacto FROM contacto WHERE correo = "lalo@lalo.com" INTO @idcontacto;

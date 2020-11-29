@@ -59,95 +59,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
               </div>
               <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 300px;">
-                <table class="table table-head-fixed text-nowrap">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Contacto</th>
-                      <th>Tipo</th>
-                      <th>Fecha</th>
-                      <th>Cantidad</th>
-                      <th>Estatus</th>
-                      <th>Descripcion</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>Venta</td>
-                      <td>11-7-2014</td>
-                      <td>$5050.00</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>Venta</td>
-                      <td>11-7-2014</td>
-                      <td>$5050.00</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>Venta</td>
-                      <td>11-7-2014</td>
-                      <td>$5050.00</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>Venta</td>
-                      <td>11-7-2014</td>
-                      <td>$5050.00</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>Venta</td>
-                      <td>11-7-2014</td>
-                      <td>$5050.00</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>Venta</td>
-                      <td>11-7-2014</td>
-                      <td>$5050.00</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>Venta</td>
-                      <td>11-7-2014</td>
-                      <td>$5050.00</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>Venta</td>
-                      <td>11-7-2014</td>
-                      <td>$5050.00</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <?php include "elements/date_table.php"?>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
@@ -178,6 +90,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<?php include "scripts/js-req.php"?>
+
 </body>
+<?php include "scripts/js-req.php"?>
+<script src="../app/app-citas.js"></script>
 </html>
