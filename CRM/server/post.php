@@ -12,7 +12,7 @@
     if(mysqli_num_rows($Query)>0){
         $fila = mysqli_fetch_row($Query);
         session_start();
-        $_SESSION['usuario'] = $fila[1]; 
+        $_SESSION['usuario'] = $fila[0]; 
         echo json_encode('success');
     }else{
         echo json_encode('error');
