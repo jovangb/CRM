@@ -5,7 +5,7 @@
     include("conexion.php");
 
     $con = Conectar();
-	$SQL = "Select * from usuariostienda WHERE email = '$usuario' AND pass = '$pass';";
+	$SQL = "Select * from admin WHERE correo = '$usuario' AND pass = '$pass';";
     $Query = EjecutarConsulta($con,$SQL);
 
 
