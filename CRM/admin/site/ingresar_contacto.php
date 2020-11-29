@@ -70,6 +70,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- jQuery -->
     <?php include "scripts/js-req.php" ?>
+    <script src="scripts/app-contactos.js"></script>
 </body>
 
 </html>
