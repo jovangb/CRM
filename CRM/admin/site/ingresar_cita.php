@@ -43,7 +43,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="container-fluid">
                     <!-- Form Contacto -->
-                    <?php include "elements/contact_form_card.php" ?>
+                    <?php include "elements/formulario_citas.php"?>
+
+
                     <!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>
@@ -63,13 +65,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- Main Footer -->
         <?php include "elements/footer.php" ?>
+        
     </div>
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
+    
     <?php include "scripts/js-req.php" ?>
+    <?php include "scripts/js-citas.php" ?>
 </body>
 
 </html>

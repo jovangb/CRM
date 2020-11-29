@@ -64,7 +64,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Cliente</th>
+                      <th>Contacto</th>
                       <th>Tipo</th>
                       <th>Fecha</th>
                       <th>Cantidad</th>
