@@ -31,7 +31,7 @@ formulario.addEventListener('submit',function(e){
         method: 'POST',
         body: datos
     })
-        .then(res => res.text())
+        .then(res => res.json())
         .then(data => {
             console.log(data)
             if(data === 'success'){

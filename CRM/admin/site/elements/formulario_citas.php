@@ -25,7 +25,7 @@
 
           <div class="form-group">
           <label for="id_contacto">Contacto</label>
-            <select class="form-control" id="contacto">
+            <select class="form-control" id="contacto" name="contacto">
               
             </select>
           </div>
