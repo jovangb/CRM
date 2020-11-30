@@ -84,7 +84,7 @@
           borderColor    : '#f39c12' //yellow
         },
         {
-          title          : 'Meeting',
+          title          : 'Putox2',
           start          : new Date(y, m, d, 10, 30),
           allDay         : false,
           backgroundColor: '#0073b7', //Blue

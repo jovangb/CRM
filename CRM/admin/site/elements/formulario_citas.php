@@ -24,8 +24,8 @@
         <div class="col-sm">
 
           <div class="form-group">
-          <label for="contacto">Contacto</label>
-            <select class="form-control" id="contacto">
+          <label for="id_contacto">Contacto</label>
+            <select class="form-control" id="contacto" name="contacto">
               
             </select>
           </div>
