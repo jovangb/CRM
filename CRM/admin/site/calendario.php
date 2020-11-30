@@ -51,7 +51,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="card-body">
                   <!-- the events -->
                   <div id="external-events">
-                    <div class="external-event bg-success">Lunch</div>
+                    <div class="external-event bg-success">Venta</div>
                     <div class="external-event bg-warning">Go home</div>
                     <div class="external-event bg-info">Do homework</div>
                     <div class="external-event bg-primary">Work on UI design</div>

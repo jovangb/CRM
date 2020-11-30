@@ -4,7 +4,7 @@
   </div>
   <!-- /.card-header -->
   <!-- form start -->
-  <form>
+  <form id="formulario">
     <div class="card-body">
 
       <!-- 
@@ -20,26 +20,26 @@
   correo
  -->
 
-      <div class="row">
+      <div  class="row">
         <div class="col-sm">
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Nombre</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputEmail1">Correo electrónico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" class="form-control" name="correo" placeholder="Enter email">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Dirección</label>
+            <label for="direccion">Dirección</label>
             <div class="form-group">
-              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Calle 1">
+              <input type="text" class="form-control" name="calle_uno" placeholder="Calle 1">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Calle 2">
+              <input type="text" class="form-control" name="calle_dos" placeholder="Calle 2">
             </div>
 
           </div>
@@ -54,26 +54,27 @@
         <div class="row">
             <div class="col-sm">
               <div class="form-group">
-                <label for="exampleInputEmail1">Teléfono</label>
-                <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Teléfono">
+                <label for="telefono">Teléfono</label>
+                <input type="number" class="form-control" name="telefono" placeholder="Teléfono">
               </div>
-
 
               <div class="form-group">
-                <label for="exampleInputPassword1">Tipo</label>
-                <select class="form-control">
+                <label for="telefono">Tipo</label>
+                <select name="tipo" id="tipo"  class="form-control">
                   <option selected disabled hidden>Tipo</option>
-                  <option value="Proveedor">Proveedor</option>
-                  <option value="Ciente">Ciente</option>
+                  <option value="proveedor">Proveedor</option>
+                  <option value="cliente">Cliente</option>
                 </select>
               </div>
+            
+
             </div>
 
             <div class="col-sm">
 
               <div class="form-group">
-                <label for="exampleInputPassword1">Celular</label>
-                <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Celular">
+                <label for="celular">Celular</label>
+                <input type="number" class="form-control" name="celular" placeholder="Celular">
               </div>
             </div>
 
@@ -83,7 +84,7 @@
             <div class="col-sm">
               <div class="form-group">
                 <label for="exampleInputPassword1">Estado</label>
-                <select class="form-control">
+                <select name="estado" id="estado" class="form-control">
                   <option selected disabled hidden>Estado</option>
                   <option value="Aguascalientes">Aguascalientes</option>
                   <option value="Baja California">Baja California</option>
@@ -121,16 +122,16 @@
               </div>
 
               <div class="form-group">
-                <label for="exampleInputPassword1">Código postal</label>
-                <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Código postal">
+                <label for="CP">Código postal</label>
+                <input type="number" class="form-control" name="CP" placeholder="Código postal">
               </div>
             </div>
 
             <div class="col-sm">
 
               <div class="form-group">
-                <label for="exampleInputPassword1">Ciudad</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ciudad">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" class="form-control" name="ciudad" placeholder="Ciudad">
               </div>
             </div>
 
@@ -143,7 +144,11 @@
     <!-- /.card-body -->
 
     <div class="card-footer">
-      <button type="submit" class="btn btn-primary">Submit</button>
+    <button class="btn btn-success" type="submit">Enviar</button>
+      
     </div>
   </form>
+  
 </div>
+
+<?php include "elements/alerta_contactos.php" ?>

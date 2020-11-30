@@ -77,5 +77,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </body>
 <?php include "scripts/js-req.php" ?>
 <?php include "scripts/js-citas.php" ?>
-<script src="../app/app-citas-form.js"></script>
+
 </html>

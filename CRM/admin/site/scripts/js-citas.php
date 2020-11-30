@@ -6,6 +6,5 @@
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 
-
-
 <script src="../plugins/fullcalendar/fechas.js"></script>
+<script src="../app/app-citas.js"></script>
