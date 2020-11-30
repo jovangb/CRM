@@ -23,7 +23,7 @@
       </a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link" data-toggle="dropdown" href="#">
+      <a class="nav-link" data-toggle="dropdown" href="#" id="cerrar_sesion">
       <i class="fas fa-sign-out-alt"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -37,7 +37,7 @@
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer" id="aceptar">Aceptar</a>
         <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item dropdown-footer" id="aceptar">Aún no</a>
+        <a href="#" class="dropdown-item dropdown-footer">Aún no</a>
       </div>
     </li>
   </ul>
