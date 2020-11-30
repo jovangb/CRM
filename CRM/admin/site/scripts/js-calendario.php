@@ -70,21 +70,21 @@
       //Random default events
       events: [
         {
-          title          : 'All Day Event',
+          title          : 'Junta con proveedor',
           start          : new Date(y, m, 1),
           backgroundColor: '#f56954', //red
           borderColor    : '#f56954', //red
           allDay         : true
         },
         {
-          title          : 'Long Event',
+          title          : 'Mejorar Diseño tienda',
           start          : new Date(y, m, d - 5),
           end            : new Date(y, m, d - 2),
           backgroundColor: '#f39c12', //yellow
           borderColor    : '#f39c12' //yellow
         },
         {
-          title          : 'Putox2',
+          title          : 'Cita Cliente',
           start          : new Date(y, m, d, 10, 30),
           allDay         : false,
           backgroundColor: '#0073b7', //Blue
@@ -99,21 +99,13 @@
           borderColor    : '#00c0ef' //Info (aqua)
         },
         {
-          title          : 'Birthday Party',
+          title          : 'Enviar informes de ventas',
           start          : new Date(y, m, d + 1, 19, 0),
           end            : new Date(y, m, d + 1, 22, 30),
           allDay         : false,
           backgroundColor: '#00a65a', //Success (green)
           borderColor    : '#00a65a' //Success (green)
         },
-        {
-          title          : 'PUTO',
-          start          : new Date(y, m+1, 25),
-          end            : new Date(y, m+1, 25),
-          url            : 'https://www.google.com/',
-          backgroundColor: '#3c8dbc', //Primary (light-blue)
-          borderColor    : '#3c8dbc' //Primary (light-blue)
-        }
       ],
       editable  : true,
       droppable : true, // this allows things to be dropped onto the calendar !!!

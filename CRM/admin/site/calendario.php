@@ -46,20 +46,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="sticky-top mb-3">
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title">Draggable Events</h4>
+                  <h4 class="card-title">Eventos</h4>
                 </div>
                 <div class="card-body">
                   <!-- the events -->
                   <div id="external-events">
                     <div class="external-event bg-success">Venta</div>
-                    <div class="external-event bg-warning">Go home</div>
-                    <div class="external-event bg-info">Do homework</div>
-                    <div class="external-event bg-primary">Work on UI design</div>
-                    <div class="external-event bg-danger">Sleep tight</div>
+                    <div class="external-event bg-warning">Cita Proveedor</div>
+                    <div class="external-event bg-info">Junta Equipo</div>
+                    <div class="external-event bg-primary">Junta Cliente</div>
                     <div class="checkbox">
                       <label for="drop-remove">
                         <input type="checkbox" id="drop-remove">
-                        remove after drop
+                        Quitar despues de usar
                       </label>
                     </div>
                   </div>
@@ -69,7 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!-- /.card -->
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Create Event</h3>
+                  <h3 class="card-title">Crear Evento</h3>
                 </div>
                 <div class="card-body">
                   <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
@@ -86,7 +85,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <input id="new-event" type="text" class="form-control" placeholder="Event Title">
 
                     <div class="input-group-append">
-                      <button id="add-new-event" type="button" class="btn btn-primary">Add</button>
+                      <button id="add-new-event" type="button" class="btn btn-primary">Crear</button>
                     </div>
                     <!-- /btn-group -->
                   </div>
